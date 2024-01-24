@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { LastOrdersData } from '@/utils/orders'
 import Image from 'next/image'

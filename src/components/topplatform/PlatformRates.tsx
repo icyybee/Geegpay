@@ -1,3 +1,5 @@
+"use client"
+
 import { PlatformData } from '@/utils/platform'
 import React from 'react'
 import { useDarkMode } from '@/context/DarkModeContext'

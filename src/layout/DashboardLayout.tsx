@@ -1,3 +1,5 @@
+"use client"
+
 import Aside from '@/components/Aside'
 import HeadBar from '@/components/HeadBar'
 import React, { ReactNode} from 'react'

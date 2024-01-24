@@ -1,3 +1,5 @@
+"use client"
+
 import React, { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import Bell from '@/assets/svg/solar_bell-outline.svg'
