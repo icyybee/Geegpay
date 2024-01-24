@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ApexOptions } from 'apexcharts';
-import ReactApexChart from 'react-apexcharts';
 import { formatNumberWithPeriods } from '@/utils/helperFunc';
 import { useDarkMode } from '@/context/DarkModeContext';
 import SelectTime from '../SelectTime';
+
 
 interface SalesTrendState {
     series: {
@@ -14,9 +14,22 @@ interface SalesTrendState {
     }[];
 }
 
-const SalesTrend: React.FC = () => {
+
+const SalesTrend: React.FC = (props:any) => {
+    const [Chart, setChart] = useState<any>()
+    const hasType = typeof props?.type !== "undefined";
+
+    useEffect(() => {
+        import("react-apexcharts").then((mod) => {
+            setChart(() => mod.default);
+        })
+        .catch((error) => {
+            console.error("Error loading react-apexcharts:", error);
+        });
+    }, []);
+
     const { isDarkMode } = useDarkMode()
-     const [state, setState] = useState<SalesTrendState>({
+    const [state, setState] = useState<SalesTrendState>({
         series: [
             {
                 data: [14000, 24000, 8000, 33000, 16000, 45000, 16000, 27000, 37000, 10000, 35000, 31000],
@@ -95,12 +108,14 @@ const SalesTrend: React.FC = () => {
                 </div>
             </div>
             <div>
-                <ReactApexChart
-                    options={options}
-                    series={state.series}
-                    type="bar"
-                    height={280}
-                />
+                {Chart && 
+                    <Chart 
+                        options={options}
+                        series={state.series}
+                        type="bar"
+                        height={280}
+                    />
+                }   
             </div>
         </div>
     )

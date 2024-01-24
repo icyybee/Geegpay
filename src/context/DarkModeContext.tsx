@@ -7,7 +7,7 @@ interface DarkModeContextProps {
   toggleMode: () => void;
 }
 
-const DarkModeContext = createContext<DarkModeContextProps | undefined>(undefined);
+const DarkModeContext = createContext<DarkModeContextProps>({} as DarkModeContextProps);
 
 interface DarkModeProviderProps {
   children: ReactNode;
@@ -28,9 +28,6 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
 };
 
 export const useDarkMode = () => {
-    const context = useContext(DarkModeContext);
-    if (!context) {
-        throw new Error('error using the useDarkMode');
-    }
-    return context;
+  const context = useContext(DarkModeContext);
+  return context;
 };
