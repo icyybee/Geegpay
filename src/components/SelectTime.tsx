@@ -6,7 +6,7 @@ import { Menu, Transition } from '@headlessui/react'
 
 export default function SelectTime() {
     const { isDarkMode } = useDarkMode()
-    const [selectedTime, setSelectedTime] = useState('Weekly')
+    const [selectedTime, setSelectedTime] = useState<string>('Weekly')
 
     return (
         <Menu as="div" className="relative">

@@ -7,7 +7,7 @@ import Dashboard from "./dashboard/page";
 import { DarkModeProvider } from "@/context/DarkModeContext";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setTimeout(() => {

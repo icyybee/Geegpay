@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import { LastOrdersData } from '@/utils/orders'
 import Image from 'next/image'
 import { useDarkMode } from '@/context/DarkModeContext'
@@ -11,6 +11,7 @@ interface OrderTableProp {
 
 const OrderTable: React.FC<OrderTableProp> = ({currentDisplay}) =>  {
     const { isDarkMode } = useDarkMode()
+    const [viewModal, setViewModal] = useState<boolean>(false)
 
     return (
         <table className="w-full">
@@ -46,7 +47,7 @@ const OrderTable: React.FC<OrderTableProp> = ({currentDisplay}) =>  {
                     <td className='h-[60px]'>
                         <p className={`text-[16px] ${order.status === "Paid" ? "text-primary" : "text-error"}`}>{order.status}</p>
                     </td>
-                    <td className='cursor-pointer h-[60px] flex items-center gap-[6px]'>
+                    <td onClick={() => setViewModal(!viewModal)} className='cursor-pointer h-[60px] flex items-center gap-[6px]'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M6 11.8334C5.93333 11.8334 5.87333 11.82 5.80667 11.7934C5.62 11.72 5.5 11.5334 5.5 11.3334V7.33337C5.5 7.06004 5.72667 6.83337 6 6.83337C6.27333 6.83337 6.5 7.06004 6.5 7.33337V10.1267L6.98 9.64671C7.17333 9.45337 7.49333 9.45337 7.68667 9.64671C7.88 9.84004 7.88 10.16 7.68667 10.3534L6.35333 11.6867C6.26 11.78 6.12667 11.8334 6 11.8334Z" fill={`${isDarkMode ? '#B2ABAB' : '#292D32'}`}/>
                             <path d="M5.99964 11.8334C5.87297 11.8334 5.7463 11.7867 5.6463 11.6867L4.31297 10.3534C4.11964 10.16 4.11964 9.84004 4.31297 9.64671C4.5063 9.45338 4.8263 9.45338 5.01964 9.64671L6.35297 10.98C6.5463 11.1734 6.5463 11.4934 6.35297 11.6867C6.25297 11.7867 6.1263 11.8334 5.99964 11.8334Z" fill={`${isDarkMode ? '#B2ABAB' : '#292D32'}`}/>
