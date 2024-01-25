@@ -31,8 +31,8 @@ body {
   z-index: 9999;
 }
 
-@media (max-width:1300px) {
+/* @media (max-width:1300px) {
   .mainbar {
     margin-left: 0;
   }
-}
+} */

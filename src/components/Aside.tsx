@@ -19,11 +19,11 @@ import { useDarkMode } from '@/context/DarkModeContext'
 export default function Aside() {
     const { isDarkMode } = useDarkMode()
     return (
-        <aside className={`py-5 w-20 overflow-y-hidden ${isDarkMode ? 'bg-darkcard' : 'bg-sidebar'} desktop:fixed desktop:block hidden`}>
+        <aside className={`py-5 w-20 overflow-y-hidden ${isDarkMode ? 'bg-darkcard' : 'bg-sidebar'} fixed`}>
             <div className='h-[95vh] flex flex-col w-full justify-between items-center'>
-                <div className='flex flex-col gap-5 items-center'>
+                <div className='flex flex-col desktop:gap-5 items-center'>
                     <Image src={Logo} alt='logo' />
-                    <div className='flex flex-col gap-4 p-2'>
+                    <div className='flex flex-col desktop:gap-4 gap-2 p-2'>
                         <div className=''>
                             <div className='desktop:absolute desktop:block hidden left-[75px]'>
                                 {isDarkMode ? (
@@ -69,7 +69,7 @@ export default function Aside() {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col gap-4'>
+                <div className='flex flex-col desktop:gap-4 gap-2'>
                     <div className='p-2 flex justify-center cursor-pointer'>
                         <Image src={Arrow} alt='logo' />
                     </div>
