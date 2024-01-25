@@ -48,11 +48,8 @@ const config: Config = {
       screens: {
         'phones': '500px',
         'tab': '600px',
-        'phone': '700px',
-        'mini': '800px',
-        'mid': '900px',
         'mids': '1000px',
-        'desktop': '1300px'
+        'desktop': '1270px'
       },
     },
   },

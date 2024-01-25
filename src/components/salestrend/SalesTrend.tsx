@@ -99,7 +99,7 @@ const SalesTrend: React.FC = (props:any) => {
     };
     
     return (
-        <div className={`flex-1 ${isDarkMode ? 'bg-darkcard' : 'bg-white'} rounded-[14px] border-gray-200 py-4 px-5 flex flex-col gap-4`}>
+        <div className={`desktop:flex-1 desktop:w-auto w-full ${isDarkMode ? 'bg-darkcard' : 'bg-white'} rounded-[14px] border-gray-200 py-4 tab:px-5 px-3 flex flex-col gap-4`}>
             <div className='w-full flex justify-between items-center'>
                 <h1 className={`text-[18px] font-semibold ${isDarkMode ? 'text-textdark-100' : 'text-textlight-200'}`}>Sales Trends</h1>
                 <div className='flex gap-[10px] items-center'>

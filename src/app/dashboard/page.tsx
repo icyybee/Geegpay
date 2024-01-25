@@ -7,11 +7,11 @@ import React from 'react'
 export default function Dashboard() {
     return (
         <div className='mt-5 px-5 w-full flex flex-col gap-5'>
-            <div className='flex gap-5 w-full items-center'>
+            <div className='desktop:flex-row flex-col flex gap-5 w-full items-center'>
                 <SalesTrend />
                 <Analysis />
             </div>
-            <div className='flex w-full gap-5'>
+            <div className='desktop:flex-row flex-col flex w-full gap-5'>
                 <LastOrders />
                 <TopPlatform />
             </div>

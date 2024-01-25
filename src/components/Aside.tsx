@@ -19,7 +19,7 @@ import { useDarkMode } from '@/context/DarkModeContext'
 export default function Aside() {
     const { isDarkMode } = useDarkMode()
     return (
-        <aside className={`py-5 w-20 overflow-y-hidden ${isDarkMode ? 'bg-darkcard' : 'bg-sidebar'} fixed`}>
+        <aside className={`py-5 w-20 overflow-y-hidden ${isDarkMode ? 'bg-darkcard' : 'bg-sidebar'} mids:fixed mids:block hidden`}>
             <div className='h-[95vh] flex flex-col w-full justify-between items-center'>
                 <div className='flex flex-col desktop:gap-5 items-center'>
                     <Image src={Logo} alt='logo' />

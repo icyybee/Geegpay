@@ -15,7 +15,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     return (
         <div className={`w-full ${isDarkMode ? 'dark:bg-bgdark' : 'bg-bgwhite'} flex min-h-screen`}>
             <Aside />
-            <div className='desktop:flex-1 w-full mainbar'>
+            <div className='flex-1 mainbar'>
                 <main className='w-full h-full flex flex-col'>
                     <HeadBar />
                     {!isDarkMode && (

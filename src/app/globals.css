@@ -17,8 +17,15 @@ body {
 }
 
 .mainbar {
-  margin-left: 80px;
-  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1000px) {
+  .mainbar {
+    margin-bottom: 20px;
+    margin-left: 80px;
+  }
 }
 
 .notify {

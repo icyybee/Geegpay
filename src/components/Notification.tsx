@@ -30,10 +30,10 @@ export default function Notification() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className={`z-[9999] absolute right-0 mt-1 w-[482px] origin-top-right rounded-md ${isDarkMode ? 'notify' : 'bg-white'} shadow-lg ring-1 ring-black/5 focus:outline-none`}>
-                    <div className="pt-[15px]">
+                <Menu.Items className={`z-[9999] absolute right-0 mt-1 mids:w-[482px] tab:w-[350px] w-[200px] origin-top-right rounded-md ${isDarkMode ? 'notify' : 'bg-white'} shadow-lg ring-1 ring-black/5 focus:outline-none`}>
+                    <div className="tab:pt-[15px]">
                         <Menu.Item>
-                            <div className='px-5 flex items-center justify-between mb-3'>
+                            <div className='px-5 tab:flex hidden items-center justify-between mb-3'>
                                 <p className={`${isDarkMode ? 'text-textdark-100' : 'text-textlight-200'} text-[18px] font-medium`}>Notifications</p>
                                 <div className={`border size-10 -mt-1 rounded-lg ${isDarkMode ? 'border-grey' : 'border-[#F7F7F7]'} cursor-pointer flex justify-center items-center`}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -42,7 +42,7 @@ export default function Notification() {
                                 </div>
                             </div>
                         </Menu.Item> 
-                        <hr className={`${isDarkMode ? 'bg-grey' : 'bg-[#F7F7F7]'}`}/>
+                        <hr className={`tab:block hidden ${isDarkMode ? 'bg-grey' : 'bg-[#F7F7F7]'}`}/>
                         <div className='p-6 flex justify-center items-center'>
                             <p className={`${isDarkMode && 'text-textdark-100'}`}>No Notifications!</p>
                         </div>

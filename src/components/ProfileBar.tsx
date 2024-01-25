@@ -8,10 +8,10 @@ export default function ProfileBar() {
     const { isDarkMode } = useDarkMode()
     return (
         <Menu as="div" className="relative">
-            <Menu.Button className='w-[215px] cursor-pointer flex gap-3 justify-center items-center border border-gray-100 rounded-[28px] py-[6px] px-2'>
+            <Menu.Button className='desktop:w-[215px] cursor-pointer flex gap-3 justify-center items-center border border-gray-100 rounded-[28px] py-[6px] px-2'>
                 <div className='flex items-center gap-2'>
                     <Image src={Profile} alt='profile' className='w-9 h-9 object-contain' />
-                    <div className='flex flex-col gap-1'>
+                    <div className='desktop:flex hidden flex-col gap-1'>
                         <h3 className={`text-right ${isDarkMode ? 'text-textdark-100' : 'text-textlight-200'}  text-[16px] font-inter`}>Justin Bergson</h3>
                         <h3 className='text-textlight-100 text-sm font-inter'>Justin@gmail.com</h3>
                     </div>
