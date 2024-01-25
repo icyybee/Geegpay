@@ -61,6 +61,15 @@ body {
   font-family: '__Plus_Jakarta_Sans_24adf4';
 }
 
+.dark .ant-popover-inner,
+.dark .ant-popover-arrow:before  {
+  background: #262626;
+}
+
+.dark .ant-popover-inner-content {
+  color: #EDF2F7;
+}
+
 .ant-modal-footer {
   display: flex;
   width: 100%;

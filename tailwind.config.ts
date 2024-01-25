@@ -19,7 +19,7 @@ const config: Config = {
         divider: '#E5EAEF',
         dividerdark: '#404040',
         gray: {
-          100: 'DADDDD',
+          100: '#DADDDD',
           200: '#EDF2F7',
           250: '#EDF2F6',
           300: '#E1DFDF',
