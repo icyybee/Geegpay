@@ -30,9 +30,37 @@ body {
 .select__time {
   z-index: 9999;
 }
+ /* ANT MODAL MODAL */
 
-/* @media (max-width:1300px) {
-  .mainbar {
-    margin-left: 0;
-  }
-} */
+.dark .ant-modal {
+  color: #B2ABAB;
+}
+
+.dark .ant-modal-header {
+  background: none;
+}
+
+.ant-modal-header {
+  text-align: center;
+}
+
+.dark .ant-modal-title {
+  color: #B2ABAB
+}
+
+.dark .ant-modal-content {
+  backdrop-filter: blur(15px);
+  background: none;
+}
+
+.ant-modal-content {
+  font-family: '__Plus_Jakarta_Sans_24adf4';
+}
+
+.ant-modal-footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+  gap: 12px;
+}

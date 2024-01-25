@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { LastOrdersData } from '@/utils/orders'
 import Image from 'next/image'
 import { useDarkMode } from '@/context/DarkModeContext'
+import ModalBox from '../Modal'
 
 interface OrderTableProp {
     currentDisplay: number
@@ -58,6 +59,9 @@ const OrderTable: React.FC<OrderTableProp> = ({currentDisplay}) =>  {
                     </td>
                 </tr>
             ))}
+            <ModalBox isModalOpen={viewModal} setIsModalOpen={setViewModal}>
+                hi
+            </ModalBox>
         </table>
     )
 }
