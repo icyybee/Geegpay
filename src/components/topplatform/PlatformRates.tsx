@@ -25,7 +25,7 @@ const PlatformRates: React.FC<PlatformRatesProps> = ({currentDisplay}) => {
                     <h2 className={`tab:text-[18px] text-[15px] font-semibold ${isDarkMode ? 'text-textdark-200' : 'text-textlight-600'}`}>{data.name}</h2>
                     <Popover content={() => content(data.rate)}>
                         <div className={`cursor-pointer w-full h-3 ${isDarkMode ? 'bg-grey' : 'bg-gray-500'} rounded-[40px]`}>
-                            <div className='rounded-[40px] h-full' style={{background: data.color, width: data.width}}></div>
+                            <div className='animate__animated animate__fadeInLeft rounded-[40px] h-full' style={{background: data.color, width: data.width}}></div>
                         </div>
                     </Popover>
                     <div className='w-full flex items-center justify-between'>

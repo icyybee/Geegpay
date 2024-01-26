@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import DashboardLayout from "../layout/DashboardLayout";
 import Dashboard from "./dashboard/page";
 import { DarkModeProvider } from "@/context/DarkModeContext";
+import 'animate.css'
 
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(true);
