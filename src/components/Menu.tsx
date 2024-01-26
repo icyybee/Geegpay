@@ -24,9 +24,9 @@ const Menu: React.FC<MenuProps> = ({setOpenDrawer}) => {
     const { isDarkMode } = useDarkMode()
     return (
         <div className='h-[95vh] flex flex-col w-full justify-between items-center'>
-            <div className='flex flex-col desktop:gap-5 items-center'>
+            <div className='flex flex-col desktop:gap-[7px] items-center'>
                 <Image src={Logo} alt='logo' onClick={() => setOpenDrawer(false)}/>
-                <div className='flex flex-col desktop:gap-4 gap-2 p-2'>
+                <div className='flex flex-col desktop:gap-[7px] gap-2 p-2'>
                     <div className=''>
                         <div className='desktop:absolute desktop:block hidden left-[75px]'>
                             {isDarkMode ? (
@@ -72,7 +72,7 @@ const Menu: React.FC<MenuProps> = ({setOpenDrawer}) => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col desktop:gap-4 gap-2'>
+            <div className='flex flex-col desktop:gap-3 gap-2'>
                 <div className='p-2 flex justify-center cursor-pointer'>
                     <Image src={Arrow} alt='logo' />
                 </div>
