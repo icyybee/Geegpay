@@ -1,21 +1,24 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import { useDarkMode } from '@/context/DarkModeContext'
 import { formatDate } from '@/utils/helperFunc'
 import Notification from './Notification'
 import ProfileBar from './ProfileBar'
 import Image from 'next/image'
 import Logo from '@/assets/svg/Vector.svg'
+import DrawerBox from './Drawer'
+import MenuResponsive from './MenuResponsive'
 
 export default function HeadBar() {
+  const [openDrawer, setOpenDrawer] = useState<boolean>(false)
   const { isDarkMode } = useDarkMode()
   const today = new Date()
   
   return (
     <div className={`nav z-10 sticky top-0 ${isDarkMode ? 'bg-darkcard' : 'bg-bgwhite'} w-full mids:h-[88px] h-[65px] flex items-center px-5 justify-between`}>
       <div className='flex items-center gap-5'>
-        <Image src={Logo} alt='logo' className='mids:hidden block'/>
+        <Image src={Logo} alt='logo' className='mids:hidden block' onClick={() => setOpenDrawer(!openDrawer)}/>
         <h1 className={`mids:text-[20px] text-[18px] font-semibold ${isDarkMode ? 'text-textdark-100' : 'text-textlight-200'}`}>Dashboard</h1>
       </div>
       <div className='flex items-center gap-[38px]'>
@@ -46,6 +49,9 @@ export default function HeadBar() {
           <ProfileBar />
         </div>
       </div>
+      <DrawerBox open={openDrawer} setOpen={setOpenDrawer}>
+        <MenuResponsive setOpenDrawer={setOpenDrawer}/>
+      </DrawerBox>
     </div>
   )
 }

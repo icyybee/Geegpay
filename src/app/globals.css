@@ -87,6 +87,23 @@ body {
   gap: 12px;
 }
 
+/* ANT DRAWER */
+.ant-drawer-content-wrapper {
+  width: 80px !important;
+}
+
+.ant-drawer-header {
+  display: none !important;
+}
+
+.ant-drawer-body {
+  padding: 15px 0px !important;
+}
+
+.dark .ant-drawer-content {
+  background: #171717;
+}
+
 .dark .nav {
   background-color: #171717;
   border-bottom: 1px solid #444;
