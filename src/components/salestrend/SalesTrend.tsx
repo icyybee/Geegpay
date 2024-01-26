@@ -107,15 +107,17 @@ const SalesTrend: React.FC = (props:any) => {
                     <SelectTime />
                 </div>
             </div>
-            <div>
-                {Chart && 
-                    <Chart 
-                        options={options}
-                        series={state.series}
-                        type="bar"
-                        height={280}
-                    />
-                }   
+            <div className='w-full tab:overflow-hidden overflow-scroll'>
+                <div className='tab:w-full w-[600px]'>
+                    {Chart && 
+                        <Chart 
+                            options={options}
+                            series={state.series}
+                            type="bar"
+                            height={280}
+                        />
+                    }   
+                </div>
             </div>
         </div>
     )

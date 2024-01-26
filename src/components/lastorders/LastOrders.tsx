@@ -18,7 +18,7 @@ export default function LastOrders() {
           <p onClick={() => setCurrentDisplay(10)} className='tab:text-[18px] font-medium text-primary cursor-pointer'>See All</p>
         )}
       </div>
-      <div className='w-full overflow-scroll'>
+      <div className='w-full tab:overflow-hidden overflow-scroll'>
         <OrderTable currentDisplay={currentDisplay} />
       </div>
     </div>
