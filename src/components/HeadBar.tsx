@@ -13,10 +13,10 @@ export default function HeadBar() {
   const today = new Date()
   
   return (
-    <div className={`${isDarkMode ? 'bg-darkcard' : 'bg-bgwhite'} w-full h-[88px] flex items-center px-5 justify-between`}>
+    <div className={`nav z-10 sticky top-0 ${isDarkMode ? 'bg-darkcard' : 'bg-bgwhite'} w-full mids:h-[88px] h-[65px] flex items-center px-5 justify-between`}>
       <div className='flex items-center gap-5'>
         <Image src={Logo} alt='logo' className='mids:hidden block'/>
-        <h1 className={`text-[20px] font-semibold ${isDarkMode ? 'text-textdark-100' : 'text-textlight-200'}`}>Dashboard</h1>
+        <h1 className={`mids:text-[20px] text-[18px] font-semibold ${isDarkMode ? 'text-textdark-100' : 'text-textlight-200'}`}>Dashboard</h1>
       </div>
       <div className='flex items-center gap-[38px]'>
         <div className={`${isDarkMode ? 'bg-transparent' : 'bg-white'} mids:flex hidden h-12 w-[349px] rounded-3xl pl-4 border border-[#DADDDD] gap-2 items-center`}>
@@ -41,7 +41,7 @@ export default function HeadBar() {
           )}
           <p className={`font-inter font-medium text-sm ${isDarkMode ? 'text-textdark-100' : 'text-textlight-200'} `}>{formatDate(today)}</p>
         </div>
-        <div className='flex gap-5 items-center'>
+        <div className='flex tab:gap-5 gap-3 items-center'>
           <Notification />
           <ProfileBar />
         </div>

@@ -87,22 +87,7 @@ body {
   gap: 12px;
 }
 
-@media (max-width:900px) {
-  .MuiTable-root {
-       width: 1118px !important;
-  }
-}
-
-.table-img img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.table-image img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  object-fit: cover;
+.dark .nav {
+  background-color: #171717;
+  border-bottom: 1px solid #444;
 }
