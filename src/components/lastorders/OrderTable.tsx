@@ -29,21 +29,21 @@ const OrderTable: React.FC<OrderTableProp> = ({currentDisplay}) =>  {
     }
 
     return (
-        <table className="w-full">
+        <table className="tab:w-full w-[600px]">
             <tr className=''>
-                <th className="font-medium pb-5 text-left text-[16px] text-textlight-60">
+                <th className="font-medium pb-5 text-left tab:text-[16px] text-sm text-textlight-60">
                     Name
                 </th>
-                <th className="text-[16px] text-textlight-60 font-medium pb-5 text-left">
+                <th className="tab:text-[16px] text-sm text-textlight-60 font-medium pb-5 text-left">
                     Date
                 </th>
-                <th className="text-[16px] text-textlight-60 font-medium pb-5 text-left">
+                <th className="tab:text-[16px] text-sm text-textlight-60 font-medium pb-5 text-left">
                     Amount
                 </th>
-                <th className=" text-[16px] text-textlight-60 font-medium pb-5 text-left">
+                <th className=" tab:text-[16px] text-sm text-textlight-60 font-medium pb-5 text-left">
                     Status
                 </th>
-                <th className="text-[16px] text-textlight-60 font-medium pb-5 text-left">
+                <th className="tab:text-[16px] text-sm text-textlight-60 font-medium pb-5 text-left">
                     Invoice
                 </th>
             </tr>
@@ -51,16 +51,16 @@ const OrderTable: React.FC<OrderTableProp> = ({currentDisplay}) =>  {
                 <tr key={index} className={`border-t ${isDarkMode ? 'border-grey' : 'border-gray-250'}`}>
                     <td className='flex items-center gap-[10px] h-[60px]'>
                         <Image src={`/${order.image}`} alt='profile' className='object-contain rounded-full' width={32} height={32}/>
-                        <p className={`text-[16px] font-medium ${isDarkMode ? 'text-textdark-200' : 'text-textlight-300'}`}>{order.name}</p>
+                        <p className={`tab:text-[16px] text-sm font-medium ${isDarkMode ? 'text-textdark-200' : 'text-textlight-300'}`}>{order.name}</p>
                     </td>
                     <td className='h-[60px]'>
-                        <p className='text-[16px] text-textdark-200'>{order.date}</p>
+                        <p className='tab:text-[16px] text-sm text-textdark-200'>{order.date}</p>
                     </td>
                     <td className='h-[60px]'>
-                        <p className={`text-[16px] font-medium ${isDarkMode ? 'text-textdark-100' : 'text-bgdark'}`}>{order.amount}</p>
+                        <p className={`tab:text-[16px] text-sm font-medium ${isDarkMode ? 'text-textdark-100' : 'text-bgdark'}`}>{order.amount}</p>
                     </td>
                     <td className='h-[60px]'>
-                        <p className={`text-[16px] ${order.status === "Paid" ? "text-primary" : "text-error"}`}>{order.status}</p>
+                        <p className={`tab:text-[16px] text-sm ${order.status === "Paid" ? "text-primary" : "text-error"}`}>{order.status}</p>
                     </td>
                     <td onClick={() => {setViewModal(!viewModal); setOrders(order)}} className='cursor-pointer h-[60px] flex items-center gap-[6px]'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">

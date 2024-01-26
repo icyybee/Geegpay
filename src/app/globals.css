@@ -7,6 +7,7 @@ body {
   margin: 0;
   background: #262626;
 }
+
 /* APEX CHART STYLING */
 .apexcharts-text tspan {
   font-family: '__Plus_Jakarta_Sans_24adf4' !important;
@@ -18,6 +19,7 @@ body {
 
 .mainbar {
   margin-left: 0px;
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -83,4 +85,24 @@ body {
   align-items: center;
   justify-content: end;
   gap: 12px;
+}
+
+@media (max-width:900px) {
+  .MuiTable-root {
+       width: 1118px !important;
+  }
+}
+
+.table-img img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.table-image img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
